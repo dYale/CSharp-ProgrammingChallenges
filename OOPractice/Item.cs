@@ -15,5 +15,30 @@ namespace OOPractice
 		public int ID { get; set;}
 		public string Name { get; set;}
 	}
+
+	public class Shovels : Item
+	{
+		public string SerialNumber { get; set;}
+	}
+
+	public class Books : Item
+	{
+		public string ISBN { get; set;}
+	}
+
+
+	public class Comics : Books
+	{
+		string Publisher { get; set;}
+		bool Colored { get; set;}
+
+	}
+
+	public class Biographies : Books
+	{
+		string Description {get;set;}
+		
+	}
+
 }
 
