@@ -14,6 +14,10 @@ namespace OOPractice
 	{
 		public int ID { get; set;}
 		public string Name { get; set;}
+		public virtual void Purchase()
+		{
+			Console.WriteLine("Running Print of:{0}",Name);
+		}
 	}
 
 	public class Shovels : Item
@@ -30,7 +34,12 @@ namespace OOPractice
 	public class Comics : Books
 	{
 		string Publisher { get; set;}
-		bool Colored { get; set;}
+		bool Colored {get; set;}
+		public void Purchase()
+		{
+			base.Purchase ();
+			Console.WriteLine("Running Print of:{0}", Colored);
+		}
 
 	}
 

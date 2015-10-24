@@ -7,15 +7,18 @@ namespace OOPractice
 	{
 		class myExample1 
 		{
-			public static void OOPrint(Warehouse house) 
+			public static void OOPrintWarehouseItem(Warehouse house) 
 			{
 				var newWarehouseItems = house.findAndReturnItem(101);
 				Console.WriteLine(newWarehouseItems.Name);
 			}
 			public static void Main() 
 			{
-				var newWarehouse = new Warehouse ("Newark", 101);
-				OOPrint(newWarehouse);
+				Item comic = new Comics ();
+				Comics newComic = comic as Comics;
+				newComic.Name = "Avengers";
+				comic.Purchase ();
+				newComic.Purchase ();
 			}
 		}
 	} 
