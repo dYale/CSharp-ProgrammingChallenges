@@ -14,11 +14,7 @@ namespace OOPractice
 			}
 			public static void Main() 
 			{
-				Item comic = new Comics ();
-				Comics newComic = comic as Comics;
-				newComic.Name = "Avengers";
-				comic.Purchase ();
-				newComic.Purchase ();
+				Item.PrintItems ();
 			}
 		}
 	} 
